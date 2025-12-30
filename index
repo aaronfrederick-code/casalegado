@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Legada Lookbook</title>
+    
+    <!-- Tailwind CSS (Styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        rust: '#A04000',
+                        sage: '#7D8C76',
+                        sand: '#F5F2EB',
+                        leather: '#3E2723',
+                        clay: '#D4AC8D',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F5F2EB;
+            color: #3E2723;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1.2s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Hide scrollbar for clean look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F2EB; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AC8D; 
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="font-serif text-2xl font-bold tracking-widest uppercase cursor-pointer">
+                Casa Legada
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#story" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Brand Story</a>
+                <a href="#men" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Men</a>
+                <a href="#women" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Women</a>
+                <a href="#kids" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Kids</a>
+                <a href="#home" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Home</a>
+                <a href="#swim" class="text-sm tracking-widest hover:opacity-70 transition-opacity uppercase">Swim</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-leather" onclick="toggleMenu()">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-[#F5F2EB] border-b border-[#3E2723] p-6 md:hidden shadow-xl">
+            <div class="flex flex-col space-y-4 items-center">
+                <a href="#story" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Brand Story</a>
+                <a href="#men" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Men</a>
+                <a href="#women" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Women</a>
+                <a href="#kids" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Kids</a>
+                <a href="#home" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Home</a>
+                <a href="#swim" onclick="toggleMenu()" class="text-lg font-serif tracking-widest">Swim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Cover Page -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gray-300">
+           <img 
+            src="https://i.imgur.com/BNzTde2.jpg" 
+            alt="Rusted Metal Gate with Backlit Logo" 
+            class="w-full h-full object-cover opacity-80"
+          />
+          <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4 animate-fade-in-up">
+            <h2 class="text-lg md:text-xl tracking-[0.3em] mb-4 font-light">SANTA FE, NEW MEXICO | EST. 2024</h2>
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-serif font-bold mb-6 tracking-tighter">
+                CASA LEGADA
+            </h1>
+            <div class="h-1 w-24 bg-clay mx-auto mb-6"></div>
+            <p class="text-xl md:text-2xl font-light italic tracking-wide">Wear the Legacy.</p>
+        </div>
+    </header>
+
+    <!-- Brand Story -->
+    <section id="story" class="py-20 md:py-32 px-6">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="mb-8 flex justify-center text-rust">
+                <i data-lucide="sun" width="48" height="48" stroke-width="1"></i>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-serif mb-8 text-rust">Welcome to the House of Legacy</h2>
+            <p class="text-lg md:text-xl leading-relaxed mb-6">
+                Born in the foothills of the Sangre de Cristo Mountains, Casa Legada represents more than just a brand; it is a way of life. Founded in 2024 in Santa Fe, New Mexico, we fuse the rugged durability of traditional ranch wear with the refined palette of the Southwest.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed font-serif italic text-gray-600">
+                From our signature canvas vests to our hand-forged branding irons, every piece is designed to withstand the elements while offering timeless style.
+            </p>
+        </div>
+    </section>
+
+    <!-- Men's Collection -->
+    <section id="men" class="py-20 bg-white text-leather">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Visual Focus Image -->
+                <div class="relative aspect-[3/4] bg-gray-200 shadow-xl order-2 lg:order-1 group overflow-hidden">
+                   <img 
+                    src="https://i.imgur.com/NbpVJ6o.jpg" 
+                    alt="Men's Collection - Vests and Hoodies" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div class="absolute bottom-6 left-6 bg-white/90 p-4 backdrop-blur-sm">
+                    <p class="text-xs tracking-widest uppercase mb-1">Featured</p>
+                    <p class="font-serif text-lg">The Legado Canvas Vest</p>
+                  </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 lg:pl-12">
+                    <span class="text-rust tracking-widest uppercase font-bold text-sm block mb-4">Collection 01</span>
+                    <h2 class="text-4xl md:text-6xl font-serif mb-8">Rugged & Refined</h2>
+                    <p class="text-lg mb-8 leading-relaxed opacity-80">
+                        Engineered for the outdoorsman who values substance and style. Our Men's Collection features heavyweight canvas vests, thermal-lined hoodies, and durable denim—all emblazoned with the mark of the Casa.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="h-2 w-2 bg-rust mt-2 mr-4 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold font-serif text-lg">High-Desert Hoodies</h4>
+                                <p class="text-sm opacity-70">Premium weight fleece in Sage Green, Rusty Red, and Deep Earth.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="h-2 w-2 bg-rust mt-2 mr-4 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <h4 class="font-bold font-serif text-lg">The Foreman’s Cap</h4>
+                                <p class="text-sm opacity-70">Structured trucker hats featuring genuine leather logo detailing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider Pattern -->
+    <div class="h-16 w-full opacity-20" style="background-image: repeating-linear-gradient(45deg, #A04000 0, #A04000 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+
+    <!-- Women's Collection -->
+    <section id="women" class="py-20" style="background-color: #EFEBE0;">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="lg:pr-12">
+                    <span class="text-sage tracking-widest uppercase font-bold text-sm block mb-4">Collection 02</span>
+                    <h2 class="text-4xl md:text-6xl font-serif mb-8 text-leather">Sun-Washed Hues</h2>
+                    <p class="text-lg mb-8 leading-relaxed opacity-80 text-leather">
+                        Inspired by the Santa Fe sunset. Our Women’s line brings a softer touch to our durable roots, featuring dusty rose palettes, sherpa-lined denim, and tailored workwear silhouettes.
+                    </p>
+                    
+                    <ul class="grid grid-cols-2 gap-4 mb-8">
+                        <li class="bg-white p-4 text-center border border-sage/20">
+                            <span class="block font-serif font-bold text-lg mb-1 text-leather">Adobe Hoodie</span>
+                            <span class="text-xs text-gray-500 uppercase">Dusty Rose</span>
+                        </li>
+                        <li class="bg-white p-4 text-center border border-sage/20">
+                            <span class="block font-serif font-bold text-lg mb-1 text-leather">Sherpa Jacket</span>
+                            <span class="text-xs text-gray-500 uppercase">Custom Embroidery</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="flex items-center space-x-2 text-sage hover:text-leather font-bold tracking-widest uppercase transition-colors">
+                        <span>View Lookbook</span>
+                        <i data-lucide="arrow-right" width="16"></i>
+                    </button>
+                </div>
+
+                <!-- Visual Focus Image -->
+                <div class="relative aspect-[3/4] bg-gray-200 shadow-xl group overflow-hidden">
+                   <img 
+                    src="https://i.imgur.com/89EsrxD.jpg" 
+                    alt="Women's Collection - Pink Hoodies" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Collection -->
+    <section id="kids" class="py-20 bg-white text-leather">
+        <div class="container mx-auto px-6 text-center">
+           <span class="text-clay tracking-widest uppercase font-bold text-sm block mb-4">Collection 03</span>
+           <h2 class="text-4xl md:text-6xl font-serif mb-12">Little Legacies</h2>
+           
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+             <!-- Kid Item 1 -->
+             <div class="group cursor-pointer">
+               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+                 <img src="https://i.imgur.com/R8mOJG6.jpg" alt="Kids Overalls" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+               </div>
+               <h3 class="font-serif text-xl mb-1">Lil’ Rancher Overalls</h3>
+               <p class="text-sm opacity-60">Durable canvas for play</p>
+             </div>
+
+             <!-- Kid Item 2 -->
+             <div class="group cursor-pointer">
+               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+                 <img src="https://i.imgur.com/DpQjBFW.png" alt="Kids Hoodie" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+               </div>
+               <h3 class="font-serif text-xl mb-1">Pint-Sized Pullovers</h3>
+               <p class="text-sm opacity-60">Matching Tan & Rose</p>
+             </div>
+
+             <!-- Kid Item 3 -->
+             <div class="group cursor-pointer">
+               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+                 <img src="https://i.imgur.com/bNQhPjJ.png" alt="Kids Boots" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+               </div>
+               <h3 class="font-serif text-xl mb-1">Toddler Western Boots</h3>
+               <p class="text-sm opacity-60">Embossed CL Logo</p>
+             </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle & Home -->
+    <section id="home" class="py-20 text-white bg-leather">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl md:text-6xl font-serif mb-6 text-clay">Bring The Ranch Home</h2>
+                    <div class="w-16 h-1 bg-clay mb-8"></div>
+                    <p class="text-lg opacity-80 mb-8 leading-relaxed font-light">
+                        The Casa Legada spirit doesn't end at your wardrobe. Elevate your everyday carry and home bar with accessories that speak to quality craftsmanship. From etched glassware to full-grain leather duffels.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="flex justify-center mb-2 text-clay">
+                                <i data-lucide="shopping-bag"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest">Shop Home</span>
+                        </div>
+                        <div class="text-center ml-8">
+                            <div class="flex justify-center mb-2 text-clay">
+                                <i data-lucide="wind"></i>
+                            </div>
+                            <span class="text-xs uppercase tracking-widest">Textiles</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://i.imgur.com/CR0Y0tP.jpg" alt="Glassware" class="w-full h-64 object-cover rounded-sm opacity-90 hover:opacity-100 transition-opacity" />
+                        <img src="https://i.imgur.com/avJI2y1.jpg" alt="Leather Duffel" class="w-full h-64 object-cover rounded-sm mt-12 opacity-90 hover:opacity-100 transition-opacity" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swim Section -->
+    <section id="swim" class="py-20 bg-[#D4AC8D]/20 text-leather">
+         <div class="container mx-auto px-6 text-center max-w-3xl">
+            <span class="text-rust tracking-widest uppercase font-bold text-sm block mb-4">Leisure</span>
+            <h2 class="text-4xl md:text-5xl font-serif mb-8 text-rust">Desert Oasis</h2>
+            <p class="mb-12">Relax and recharge. Our leisure collection brings the spa experience to your home, featuring plush textiles and warm, inviting tones.</p>
+            
+            <div class="relative h-64 md:h-96 w-full overflow-hidden rounded-lg shadow-lg">
+                <img src="https://i.imgur.com/F8RaKoV.jpg" alt="Swim and Robes" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="bg-white/90 px-8 py-3 text-leather uppercase tracking-widest font-bold hover:bg-leather hover:text-white transition-colors">
+                        Explore Swim
+                    </button>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Footer / Back Cover -->
+    <footer class="py-20 text-center text-white" style="background-color: #2C1B18;">
+        <div class="container mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter opacity-10 select-none">CASA LEGADA</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 border-t border-white/10 pt-12">
+                 <div>
+                    <h4 class="font-serif text-xl mb-4 text-clay">Visit</h4>
+                    <p class="opacity-70">Santa Fe, New Mexico</p>
+                    <div class="flex justify-center mt-2 opacity-50"><i data-lucide="map-pin" width="16"></i></div>
+                 </div>
+                 <div>
+                    <h4 class="font-serif text-xl mb-4 text-clay">Contact</h4>
+                    <p class="opacity-70">hello@casalegada.com</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                       <i data-lucide="instagram" class="cursor-pointer hover:text-clay" width="20"></i>
+                       <i data-lucide="mail" class="cursor-pointer hover:text-clay" width="20"></i>
+                    </div>
+                 </div>
+                 <div>
+                    <h4 class="font-serif text-xl mb-4 text-clay">Legacy</h4>
+                    <p class="opacity-70">"Wear the Legacy."</p>
+                 </div>
+            </div>
+            
+            <p class="text-xs opacity-30 tracking-widest uppercase">© 2024 Casa Legada. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-sand/95', 'shadow-md', 'py-3');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-sand/95', 'shadow-md', 'py-3');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
