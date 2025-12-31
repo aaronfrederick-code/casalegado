@@ -110,7 +110,8 @@
             alt="Rusted Metal Gate with Backlit Logo" 
             class="w-full h-full object-cover opacity-80"
           />
-          <div class="absolute inset-0 bg-black/30"></div>
+          <!-- Updated Gradient Overlay for Readability -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
         </div>
         
         <div class="relative z-10 text-center text-white px-4 animate-fade-in-up">
@@ -125,7 +126,8 @@
 
     <!-- Brand Story -->
     <section id="story" class="py-20 md:py-32 px-6">
-        <div class="container mx-auto max-w-4xl text-center">
+        <!-- Narrowed Max Width to 2xl for Editorial Look -->
+        <div class="container mx-auto max-w-2xl text-center">
             <div class="mb-8 flex justify-center">
                 <!-- Replaced Sun Icon with Logo Image -->
                 <img src="Casa Legado.jpg" alt="Casa Legado Logo" class="h-32 w-auto object-contain opacity-90 mix-blend-multiply" />
@@ -144,14 +146,14 @@
     <section id="men" class="py-20 bg-white text-leather">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Visual Focus Image -->
-                <div class="relative aspect-[4/3] bg-gray-200 shadow-xl order-2 lg:order-1 group overflow-hidden">
+                <!-- Visual Focus Image - Removed Gray Background -->
+                <div class="relative aspect-[4/3] order-2 lg:order-1 group overflow-hidden">
                    <img 
                     src="https://i.imgur.com/NbpVJ6o.jpg" 
                     alt="Men's Collection - Vests and Hoodies" 
                     class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div class="absolute bottom-6 left-6 bg-white/90 p-4 backdrop-blur-sm">
+                  <div class="absolute bottom-6 left-6 bg-white/90 p-4 backdrop-blur-sm shadow-sm">
                     <p class="text-xs tracking-widest uppercase mb-1">Featured</p>
                     <p class="font-serif text-lg">The Ranch Collection</p>
                   </div>
@@ -211,14 +213,15 @@
                         </li>
                     </ul>
                     
-                    <button class="flex items-center space-x-2 text-sage hover:text-leather font-bold tracking-widest uppercase transition-colors">
+                    <!-- Updated Button: Ghost / Outlined Style -->
+                    <button class="inline-flex items-center gap-2 border border-sage text-sage px-8 py-3 uppercase tracking-widest font-bold hover:bg-sage hover:text-white transition-colors duration-300">
                         <span>View Lookbook</span>
                         <i data-lucide="arrow-right" width="16"></i>
                     </button>
                 </div>
 
-                <!-- Visual Focus Image -->
-                <div class="relative aspect-[4/3] bg-gray-200 shadow-xl group overflow-hidden">
+                <!-- Visual Focus Image - Removed Gray Background -->
+                <div class="relative aspect-[4/3] group overflow-hidden">
                    <img 
                     src="https://i.imgur.com/89EsrxD.jpg" 
                     alt="Women's Collection - Pink Hoodies" 
@@ -239,7 +242,8 @@
            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
              <!-- Kid Item 1 -->
              <div class="group cursor-pointer">
-               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+               <!-- Removed bg-sand -->
+               <div class="aspect-square mb-4 overflow-hidden">
                  <img src="https://i.imgur.com/R8mOJG6.jpg" alt="Kids Overalls" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"/>
                </div>
                <h3 class="font-serif text-xl mb-1">The Junior Rancher</h3>
@@ -248,7 +252,8 @@
 
              <!-- Kid Item 2 -->
              <div class="group cursor-pointer">
-               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+               <!-- Removed bg-sand -->
+               <div class="aspect-square mb-4 overflow-hidden">
                  <img src="https://i.imgur.com/DpQjBFW.png" alt="Kids Hoodie" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"/>
                </div>
                <h3 class="font-serif text-xl mb-1">Cozy Layers</h3>
@@ -257,7 +262,8 @@
 
              <!-- Kid Item 3 -->
              <div class="group cursor-pointer">
-               <div class="aspect-square bg-sand mb-4 overflow-hidden">
+               <!-- Removed bg-sand -->
+               <div class="aspect-square mb-4 overflow-hidden">
                  <img src="https://i.imgur.com/bNQhPjJ.png" alt="Kids Boots" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"/>
                </div>
                <h3 class="font-serif text-xl mb-1">Little Accessories</h3>
@@ -309,10 +315,11 @@
             <h2 class="text-4xl md:text-5xl font-serif mb-8 text-rust">Desert Oasis</h2>
             <p class="mb-12">Relax and recharge. Our leisure collection brings the spa experience to your home, featuring plush textiles and warm, inviting tones.</p>
             
-            <div class="relative h-64 md:h-96 w-full overflow-hidden rounded-lg shadow-lg">
+            <div class="relative h-64 md:h-96 w-full overflow-hidden rounded-lg shadow-lg group">
                 <img src="https://i.imgur.com/F8RaKoV.jpg" alt="Swim and Robes" class="w-full h-full object-contain" />
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <button class="bg-white/90 px-8 py-3 text-leather uppercase tracking-widest font-bold hover:bg-leather hover:text-white transition-colors">
+                    <!-- Updated Button: White Outline / Ghost Style -->
+                    <button class="border-2 border-white text-white px-8 py-3 uppercase tracking-widest font-bold hover:bg-white hover:text-leather transition-colors duration-300">
                         Explore Leisure
                     </button>
                 </div>
@@ -323,6 +330,19 @@
     <!-- Footer / Back Cover -->
     <footer class="py-20 text-center text-white" style="background-color: #2C1B18;">
         <div class="container mx-auto px-6">
+            
+            <!-- Added Newsletter Section -->
+            <div class="mb-20 max-w-xl mx-auto border-b border-white/10 pb-16">
+                <h3 class="text-2xl font-serif mb-4 text-clay">Join the Legacy</h3>
+                <p class="text-sm opacity-60 mb-6 font-light">Sign up to receive updates on new arrivals and exclusive releases.</p>
+                <form class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Your Email Address" class="flex-1 bg-transparent border border-white/30 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-clay transition-colors" />
+                    <button type="submit" class="bg-clay text-leather px-8 py-3 uppercase tracking-widest font-bold hover:bg-white transition-colors duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
             <div class="mb-12">
                 <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter opacity-10 select-none">CASA LEGADO</h2>
             </div>
